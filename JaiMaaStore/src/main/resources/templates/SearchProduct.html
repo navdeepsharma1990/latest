@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<title>JaiMaa Store</title>
+
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="header_resize">
+				<div class="menu_nav">
+
+
+					<ul>
+						<li class="active"><a href="home.html"><span><span>Home</span></span></a></li>
+						<li class="active"><a href="FetchProduct.html"><span><span>Add
+										Products</span></span></a></li>
+						<li class="active"><a href="DeleteProduct.html"><span><span>Remove
+										Products</span></span></a></li>
+						<li class="active"><a href="SearchProducts.html"><span><span>Search
+										Product</span></span></a></li>
+
+					</ul>
+				</div>
+				<div class="clr"></div>
+				<div class="logo">
+					<h1>
+						<a href="index.html">Jai Maa Store<br /> <small><font
+								color="DodgerBlue" size="4">JAI MATA DI</font></small></a>
+					</h1>
+				</div>
+				<div class="clr"></div>
+				<img src="images/image.jpg" width="850" height="160" alt="" />
+
+				<form action="#" th:action="@{/Searchproduct}"
+					th:object="${searchproductbo}" method="post">
+					<fieldset>
+						<legend>
+							<font color="DodgerBlue"><b> Add Product Details</b></font>
+						</legend>
+						<table>
+							<tr>
+								<td><font color="DodgerBlue"><b>Product ID:</b></font></td>
+								<td><input type="text" th:field="*{id}" /></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="Search Product" /></td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_resize">
+				<ul class="fmenu">
+					<li class="active"><a href="home.html">Home</a></li>
+					<li><a href="FetchProduct.html">Add Products</a></li>
+					<li><a href="DeleteProduct.html">Remove Product</a></li>
+					<li><a href="SearchProducts.html">Search Products</a></li>
+				</ul>
+				<div class="clr"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
